@@ -9,7 +9,7 @@ Laravel dyanmic menu like wordPress
 
 1. Run
 ```php
-composer require vfixtechnology/laravel-menu
+composer require vfixtechnology/laravel-menu:dev-master
 ```
 
 **Step 2 & 3 are optional if you are using laravel 9 or 10**
