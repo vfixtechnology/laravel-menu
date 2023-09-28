@@ -16,7 +16,6 @@
   ],
   "require": {
     "php": ">=8.0",
-    "vfixtechnology/laravel-menu": "dev-master",
     "illuminate/support": "^8.0 || ^9.0 || ^10"
   },
   "license": "MIT",
