@@ -1,0 +1,39 @@
+{
+  "name": "vfixtechnology/laravel-menu",
+  "description": "drag and drop menu generator like wordpress for laravel 9",
+  "keywords": [
+    "Laravel",
+    "Menu",
+    "Wordpress",
+    "Builder"
+  ],
+  "authors": [
+    {
+      "name": "Vfix Technology",
+      "email": "info@vfixtechnology.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "illuminate/support": "^8.0 || ^9.0 || ^10"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Vfixtechnology\\Menu\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Vfixtechnology\\Menu\\MenuServiceProvider"
+      ],
+      "aliases": {
+        "Menu": "Vfixtechnology\\Menu\\Facades\\Menu"
+      }
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
