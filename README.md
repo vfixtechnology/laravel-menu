@@ -167,8 +167,8 @@ Return: Array
 $menuList = Menu::getByName('Admin');
 ```
 
+### Want to add the extra features like category and posts follow steps:
 
-Want to add the extra features like category and posts follow below steps
 
 Step 1: Open the MenuController path vendor/vfixtechnology/laravel-menu/src/Controllers/MenuController
 ```php
@@ -295,7 +295,8 @@ Step 3: Now Create the js code to send the AJAX Request in resources/views/vendo
 
 ```javascript
 
-    function addCategories() {
+    <script>
+        function addCategories() {
         $('#spincategory').show();
 
         var categoriesData = [];
@@ -337,39 +338,43 @@ Step 3: Now Create the js code to send the AJAX Request in resources/views/vendo
         //     categories: categoriesData
         // });
     }
+    </script>
 ```
 
 Step 4: Create the route to send the request
+Add this route code in the route.php file vendor/vfixtechnology/laravel-menu/routes.php
 ```php
 Route::post($path . '/addCategoryToMenu',array('as' => 'addCategory', 'uses' => '\vfixtechnology\Menu\Controllers\MenuController@addCategory'));
 ```
-Add this route code in the route.php file vendor/vfixtechnology/laravel-menu/routes.php
+
 
 Step 5: Now add below code to activate the live search using jquery in resources/views/vendor/wmenu/menu-html.blade.php
 
-first add the jquery cdn
+Add jquery via CDN or local file
 ```javascript
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
 ```
 Then add the below jQuery code to add the live search
 ```javascript
-    $(document).ready(function() {
-        $('#category-search').on('input', function() {
-            var searchText = $(this).val().toLowerCase();
-
-            $('.category-item').each(function() {
-                var categoryText = $(this).text().toLowerCase();
-                if (categoryText.includes(searchText)) {
-                    $(this).show();
-                } else {
-                    $(this).hide();
-                }
+    <script>
+        $(document).ready(function() {
+            $('#category-search').on('input', function() {
+                var searchText = $(this).val().toLowerCase();
+    
+                $('.category-item').each(function() {
+                    var categoryText = $(this).text().toLowerCase();
+                    if (categoryText.includes(searchText)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
             });
         });
-    });
+    </script>
 ```
 
-Follow the similar step for to add posts, pages or anything. 
+### Follow the similar step for to add posts, pages or anything. 
 
 ### Compatibility
 
