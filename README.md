@@ -1,6 +1,6 @@
 # laravel-menu
 Laravel dyanmic menu like wordPress
-# Laravel Drag and drop dynamic menu like workpress
+# Laravel Drag and drop dynamic menu like wordPress
 
 ![Larvel Dynamic Menu](screenshot.png)
 ![Laravel Wordpress Menu](img/one.png)
